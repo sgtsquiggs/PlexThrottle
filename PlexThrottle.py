@@ -1,5 +1,6 @@
 from xml.etree import ElementTree
 from config import config
+from datetime import datetime as dt
 import requests
 import transmissionrpc
 
@@ -77,7 +78,7 @@ def set_transmission_speed_limit(host, port, user, password, value):
 
 
 active_streams = get_active_remote_streams(PMS_HOST, PMS_PORT, PMS_TOKEN)
-print("Active Streams: %d" % active_streams)
+print("[%s] Active Streams: %d" % (dt.now().strftime('%Y-%m-%d %H:%M:%S'), active_streams))
 
 if active_streams < 1:
     speed = config['NONE']

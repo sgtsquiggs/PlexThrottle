@@ -22,6 +22,7 @@ config = {
     'TRANS_PORT': 9091,
     'TRANS_USER': None,
     'TRANS_PASS': None,
+    'TRANS_PUBLIC_RATIO_LIMIT': 0.001,
 
     ########################################################
     ## SPEED SETTINGS[down, up] ############################
