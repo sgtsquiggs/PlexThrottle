@@ -77,6 +77,7 @@ def set_transmission_speed_limit(host, port, user, password, value):
 
 
 active_streams = get_active_remote_streams(PMS_HOST, PMS_PORT, PMS_TOKEN)
+print("Active Streams: %d" % active_streams)
 
 if active_streams < 1:
     speed = config['NONE']
