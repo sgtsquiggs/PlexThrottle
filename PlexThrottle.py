@@ -63,7 +63,19 @@ def set_sabnzbd_speed_limit(host, port, apikey, value):
     if not SABNZBD_ENABLED:
         return
     url = 'http://%s:%d/sabnzbd/api' % (host, port)
-    params = {'mode': 'config', 'name': 'speedlimit', 'apikey': apikey, 'value': value[0]}
+    params = {'mode': 'config', 'name': 'speedlimit', 'apikey': apikey, 'value': value}
+    requests.get(url, params=params)
+
+
+def set_sabnzbd_max_speed_limit(host, port, apikey, value):
+    set_sabnzbd_config_value(host, port, apikey, 'misc', 'bandwidth_max', value)
+
+
+def set_sabnzbd_config_value(host, port, apikey, section, keyword, value):
+    if not SABNZBD_ENABLED:
+        return
+    url = 'http://%s:%d/sabnzbd/api' % (host, port)
+    params = {'mode': 'set_config', 'section': section, 'keyword': keyword, 'apikey': apikey, 'value': value}
     requests.get(url, params=params)
 
 
@@ -82,21 +94,19 @@ print("[%s] Active Streams: %d" % (dt.now().strftime('%Y-%m-%d %H:%M:%S'), activ
 
 if active_streams < 1:
     speed = config['NONE']
-    set_sabnzbd_speed_limit(SAB_HOST, SAB_PORT, SAB_APIKEY, speed)
-    set_transmission_speed_limit(TRANS_HOST, TRANS_PORT, TRANS_USER, TRANS_PASS, speed)
 elif active_streams < 3:
     speed = config['UNDER_THREE']
-    set_sabnzbd_speed_limit(SAB_HOST, SAB_PORT, SAB_APIKEY, speed)
-    set_transmission_speed_limit(TRANS_HOST, TRANS_PORT, TRANS_USER, TRANS_PASS, speed)
 elif active_streams < 5:
     speed = config['UNDER_FIVE']
-    set_sabnzbd_speed_limit(SAB_HOST, SAB_PORT, SAB_APIKEY, speed)
-    set_transmission_speed_limit(TRANS_HOST, TRANS_PORT, TRANS_USER, TRANS_PASS, speed)
 elif active_streams < 7:
     speed = config['UNDER_SEVEN']
-    set_sabnzbd_speed_limit(SAB_HOST, SAB_PORT, SAB_APIKEY, speed)
-    set_transmission_speed_limit(TRANS_HOST, TRANS_PORT, TRANS_USER, TRANS_PASS, speed)
 else:
     speed = [0, 0]
-    set_sabnzbd_speed_limit(SAB_HOST, SAB_PORT, SAB_APIKEY, speed)
-    set_transmission_speed_limit(TRANS_HOST, TRANS_PORT, TRANS_USER, TRANS_PASS, speed)
+
+set_transmission_speed_limit(TRANS_HOST, TRANS_PORT, TRANS_USER, TRANS_PASS, speed)
+
+percent = '%d%%' % round(speed[0] / config['NONE'][0] * 100)
+max_MBps = '%dM' % round(config['NONE'][0] / 1024)
+
+set_sabnzbd_speed_limit(SAB_HOST, SAB_PORT, SAB_APIKEY, percent)
+set_sabnzbd_max_speed_limit(SAB_HOST, SAB_PORT, SAB_APIKEY, max_MBps)
