@@ -23,6 +23,7 @@ config = {
     'TRANS_USER': None,
     'TRANS_PASS': None,
     'TRANS_PUBLIC_RATIO_LIMIT': 0.001,
+    'TRANS_NYAA_RATIO_LIMIT': 10,
 
     ########################################################
     ## SPEED SETTINGS[down, up] ############################
