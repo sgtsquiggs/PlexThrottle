@@ -12,7 +12,7 @@ TRANS_PUBLIC_RATIO_LIMIT = config['TRANS_PUBLIC_RATIO_LIMIT']
 TRANS_NYAA_RATIO_LIMIT = config['TRANS_NYAA_RATIO_LIMIT']
 
 
-def update_nyaa_torrents(host, port, user, password, ratio):
+def update_nyaa_torrents(host, port, user, password, ratio=TRANS_NYAA_RATIO_LIMIT):
     tc = transmissionrpc.Client(host, port=port, user=user, password=password)
 
     # All torrents
@@ -22,7 +22,11 @@ def update_nyaa_torrents(host, port, user, password, ratio):
     torrents = filter(lambda t: not t.isPrivate, torrents)
 
     # Only torrents using nyaa.se tracker
-    torrents = list(filter(lambda t: reduce(lambda result, x: result or 'nyaa' in x['announce'], t.trackers, False) is True, torrents))
+    torrents = list(filter(
+        lambda t: reduce(
+            lambda result, x: result or 'nyaa' in x['announce'] or 'wakku' in x['announce'], t.trackers, False
+        ) is True, torrents
+    ))
 
     # Torrent ids
     ids = list(map(lambda t: t.id, torrents))
