@@ -1,0 +1,12 @@
+{
+    "python.pythonPath": "${env.VIRTUAL_ENV}/bin/python",
+    "python.linting.pylintEnabled": true,
+    "editor.rulers": [
+        120
+    ],
+    "files.exclude": {
+        "**/*.pyc": true,
+        ".vscode/tags": true,
+        "node_modules/": true
+    }
+}

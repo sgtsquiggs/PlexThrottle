@@ -1,7 +1,9 @@
-from config import config
-import transmissionrpc
 from datetime import datetime as dt
 from functools import reduce
+
+import transmissionrpc
+
+from config import config
 
 TRANSMISSION_ENABLED = config['TRANSMISSION_ENABLED']
 TRANS_HOST = config['TRANS_HOST']

@@ -1,0 +1,63 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ElementTree	../PlexThrottle.py	/^from xml.etree import ElementTree$/;"	kind:namespace	line:1
+PMS_HOST	../PlexThrottle.py	/^PMS_HOST = config['PMS_HOST']$/;"	kind:variable	line:7
+PMS_PORT	../PlexThrottle.py	/^PMS_PORT = config['PMS_PORT']$/;"	kind:variable	line:8
+PMS_TOKEN	../PlexThrottle.py	/^PMS_TOKEN = config['PMS_TOKEN']$/;"	kind:variable	line:9
+Plex	../PlexThrottle.py	/^class Plex(object):$/;"	kind:class	line:23
+PlexThrottle.py	../PlexThrottle.py	1;"	kind:file	line:1
+SABNZBD_ENABLED	../PlexThrottle.py	/^SABNZBD_ENABLED = config['SABNZBD_ENABLED']$/;"	kind:variable	line:11
+SAB_APIKEY	../PlexThrottle.py	/^SAB_APIKEY = config['SAB_APIKEY']$/;"	kind:variable	line:14
+SAB_HOST	../PlexThrottle.py	/^SAB_HOST = config['SAB_HOST']$/;"	kind:variable	line:12
+SAB_PORT	../PlexThrottle.py	/^SAB_PORT = config['SAB_PORT']$/;"	kind:variable	line:13
+TRANSMISSION_ENABLED	../PlexThrottle.py	/^TRANSMISSION_ENABLED = config['TRANSMISSION_ENABLED']$/;"	kind:variable	line:16
+TRANSMISSION_ENABLED	../TransmissionCleanUp.py	/^TRANSMISSION_ENABLED = config['TRANSMISSION_ENABLED']$/;"	kind:variable	line:6
+TRANS_ANIME_RATIO_LIMIT	../TransmissionCleanUp.py	/^TRANS_ANIME_RATIO_LIMIT = config['TRANS_ANIME_RATIO_LIMIT']$/;"	kind:variable	line:12
+TRANS_HOST	../PlexThrottle.py	/^TRANS_HOST = config['TRANS_HOST']$/;"	kind:variable	line:17
+TRANS_HOST	../TransmissionCleanUp.py	/^TRANS_HOST = config['TRANS_HOST']$/;"	kind:variable	line:7
+TRANS_PASS	../PlexThrottle.py	/^TRANS_PASS = config['TRANS_PASS']$/;"	kind:variable	line:20
+TRANS_PASS	../TransmissionCleanUp.py	/^TRANS_PASS = config['TRANS_PASS']$/;"	kind:variable	line:10
+TRANS_PORT	../PlexThrottle.py	/^TRANS_PORT = config['TRANS_PORT']$/;"	kind:variable	line:18
+TRANS_PORT	../TransmissionCleanUp.py	/^TRANS_PORT = config['TRANS_PORT']$/;"	kind:variable	line:8
+TRANS_PUBLIC_RATIO_LIMIT	../TransmissionCleanUp.py	/^TRANS_PUBLIC_RATIO_LIMIT = config['TRANS_PUBLIC_RATIO_LIMIT']$/;"	kind:variable	line:11
+TRANS_USER	../PlexThrottle.py	/^TRANS_USER = config['TRANS_USER']$/;"	kind:variable	line:19
+TRANS_USER	../TransmissionCleanUp.py	/^TRANS_USER = config['TRANS_USER']$/;"	kind:variable	line:9
+TransmissionCleanUp.py	../TransmissionCleanUp.py	1;"	kind:file	line:1
+__init__	../PlexThrottle.py	/^    def __init__(self, host, port, token):$/;"	kind:member	line:24
+active_streams	../PlexThrottle.py	/^active_streams = get_active_remote_streams(PMS_HOST, PMS_PORT, PMS_TOKEN)$/;"	kind:variable	line:94
+config	../PlexThrottle.py	/^from config import config$/;"	kind:namespace	line:2
+config	../TransmissionCleanUp.py	/^from config import config$/;"	kind:namespace	line:1
+config	../config.py	/^config = {$/;"	kind:variable	line:1
+config.py	../config.py	1;"	kind:file	line:1
+delete_completed_public_stopped_torrents	../TransmissionCleanUp.py	/^def delete_completed_public_stopped_torrents(host, port, user, password):$/;"	kind:function	line:76
+dt	../PlexThrottle.py	/^from datetime import datetime as dt$/;"	kind:namespace	line:3
+dt	../TransmissionCleanUp.py	/^from datetime import datetime as dt$/;"	kind:namespace	line:3
+get_active_remote_streams	../PlexThrottle.py	/^    def get_active_remote_streams(self):$/;"	kind:member	line:41
+get_active_streams	../PlexThrottle.py	/^    def get_active_streams(self):$/;"	kind:member	line:36
+get_session_tree	../PlexThrottle.py	/^    def get_session_tree(self):$/;"	kind:member	line:29
+is_remote_ip	../PlexThrottle.py	/^def is_remote_ip(ip_address):$/;"	kind:function	line:48
+max_MBps	../PlexThrottle.py	/^max_MBps = '%dM' % round(config['NONE'][0] \/ 1024)$/;"	kind:variable	line:111
+num_changed	../TransmissionCleanUp.py	/^num_changed = len(update_global_ratio_public_torrents(TRANS_HOST, TRANS_PORT, TRANS_USER, TRANS_PASS, TRANS_PUBLIC_RATIO_LIMIT))$/;"	kind:variable	line:98
+num_deleted	../TransmissionCleanUp.py	/^num_deleted = len(delete_completed_public_stopped_torrents(TRANS_HOST, TRANS_PORT, TRANS_USER, TRANS_PASS))$/;"	kind:variable	line:101
+num_stopped	../TransmissionCleanUp.py	/^num_stopped = len(stop_completed_public_seeding_torrents(TRANS_HOST, TRANS_PORT, TRANS_USER, TRANS_PASS))$/;"	kind:variable	line:100
+percent	../PlexThrottle.py	/^percent = '%d%%' % round(speed[0] \/ config['NONE'][0] * 100)$/;"	kind:variable	line:110
+reduce	../TransmissionCleanUp.py	/^from functools import reduce$/;"	kind:namespace	line:4
+requests	../PlexThrottle.py	/^import requests$/;"	kind:namespace	line:4
+set_sabnzbd_config_value	../PlexThrottle.py	/^def set_sabnzbd_config_value(host, port, apikey, section, keyword, value):$/;"	kind:function	line:76
+set_sabnzbd_max_speed_limit	../PlexThrottle.py	/^def set_sabnzbd_max_speed_limit(host, port, apikey, value):$/;"	kind:function	line:72
+set_sabnzbd_speed_limit	../PlexThrottle.py	/^def set_sabnzbd_speed_limit(host, port, apikey, value):$/;"	kind:function	line:64
+set_transmission_speed_limit	../PlexThrottle.py	/^def set_transmission_speed_limit(host, port, user, password, value):$/;"	kind:function	line:84
+speed	../PlexThrottle.py	/^    speed = [0, 0]$/;"	kind:variable	line:106
+speed	../PlexThrottle.py	/^    speed = config['NONE']$/;"	kind:variable	line:98
+speed	../PlexThrottle.py	/^    speed = config['UNDER_FIVE']$/;"	kind:variable	line:102
+speed	../PlexThrottle.py	/^    speed = config['UNDER_SEVEN']$/;"	kind:variable	line:104
+speed	../PlexThrottle.py	/^    speed = config['UNDER_THREE']$/;"	kind:variable	line:100
+stop_completed_public_seeding_torrents	../TransmissionCleanUp.py	/^def stop_completed_public_seeding_torrents(host, port, user, password):$/;"	kind:function	line:57
+transmissionrpc	../PlexThrottle.py	/^import transmissionrpc$/;"	kind:namespace	line:5
+transmissionrpc	../TransmissionCleanUp.py	/^import transmissionrpc$/;"	kind:namespace	line:2
+update_global_ratio_public_torrents	../TransmissionCleanUp.py	/^def update_global_ratio_public_torrents(host, port, user, password, ratio):$/;"	kind:function	line:38
+update_nyaa_torrents	../TransmissionCleanUp.py	/^def update_nyaa_torrents(host, port, user, password, ratio=TRANS_ANIME_RATIO_LIMIT):$/;"	kind:function	line:15
